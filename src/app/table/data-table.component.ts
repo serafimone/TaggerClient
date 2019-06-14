@@ -42,6 +42,13 @@ export class DataTableComponent implements OnInit {
     })
   }
 
+  deleteDocument(document: DocumentModel) {
+    this.documentService.deleteDocument(document).subscribe(() => {
+      const index = this.dataSource.map(elem => elem.ID).indexOf(document.ID)
+      this.getDocuments()
+    }, (error: any) => {console.log(error)})
+  }
+
   deleteRecord(record: DocumentRecord) {
     this.recordsService.deleteRecord(record).subscribe(() => {
       let documentRecords = this.dataSource

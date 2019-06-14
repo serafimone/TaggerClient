@@ -1,10 +1,12 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Constants } from '../config/constants';
 import { Injectable } from '@angular/core';
 
+
 @Injectable()
 export class ServiceBase {
+
     constructor(
         private httpClient : HttpClient
     ) {}
@@ -18,6 +20,6 @@ export class ServiceBase {
     }
 
     protected delete(resource: string) : Observable<any> {
-        return this.httpClient.delete(Constants.API_ENDPOINT + resource, {responseType: 'text'})
+        return this.httpClient.delete(Constants.API_ENDPOINT + resource)
     }
 }

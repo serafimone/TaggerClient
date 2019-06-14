@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { MatNativeDateModule } from '@angular/material';
+import { MatNativeDateModule, MatTabsModule } from '@angular/material';
 import { MaterialModule } from './material/material.module';
 import { DataTableComponent } from './table/data-table.component';
 import { DocumentsService } from './services/documents.service';
@@ -18,6 +18,7 @@ import { RecordsService } from './services/records.service';
     MaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    MatTabsModule
   ],
   entryComponents: [DataTableComponent],
   declarations: [DataTableComponent],

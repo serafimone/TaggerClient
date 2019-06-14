@@ -12,8 +12,8 @@ export class DocumentsService extends ServiceBase {
         return this.get<DocumentModel>(`documents/${id}`)
     }
 
-    deleteDocument(id: number) : Observable<any> {
-        return this.delete(`documents/${id}`)
+    deleteDocument(document: DocumentModel) : Observable<any> {
+        return this.delete(`documents/${document.ID}`)
     }
 }
     
