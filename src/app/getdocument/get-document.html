@@ -1,0 +1,37 @@
+<div>
+<div>
+<mat-form-field class="full">
+    <mat-label>Выбрать документ</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let document of documents" [value]="document.Title">{{document.Title}}</mat-option>
+    </mat-select>
+</mat-form-field>
+</div>
+<div class="center">
+<mat-form-field class="full">
+    <mat-label>Выбрать шрифт</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let font of fonts" [value]="font">{{font}}</mat-option>
+    </mat-select>
+</mat-form-field>
+</div>
+<div>
+<mat-form-field class="full">
+    <mat-label>Выбрать размер шрифта</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let fontSize of fontSizes" [value]="fontSize">{{fontSize}}</mat-option>
+    </mat-select>
+</mat-form-field>
+</div>
+<div>
+<mat-form-field class="full">
+    <mat-label>Выбрать межстрочный интервал</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let lineSpacing of lineSpacings" [value]="lineSpacing">{{lineSpacing}}</mat-option>
+    </mat-select>
+</mat-form-field>
+</div>
+<div class="center">
+<button class="full" mat-button>Сформировать документ</button>    
+</div>
+</div>

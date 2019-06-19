@@ -1,0 +1,17 @@
+<div>
+    <mat-form-field class="full">
+      <input matInput placeholder="Введите логин" type="text">  
+    </mat-form-field>
+    <mat-form-field class="full">
+        <input matInput placeholder="Введите свой пароль" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Скрыть пароль'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+    <div>
+      <button class="full" mat-button>Войти</button>
+    </div>  
+    <div>
+        <button class="full" mat-button>Регистрация</button>
+    </div>  
+  </div>

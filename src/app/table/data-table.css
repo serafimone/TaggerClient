@@ -1,5 +1,6 @@
 table {
     width: 100%;
+    min-width: 800;
   }
   
   tr.detail-row {
@@ -47,3 +48,6 @@ table {
     opacity: 0.5;
   }
   
+  .full {
+    width:100%;
+  }
